@@ -8,89 +8,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/styles.css">
     <title>Ananya Anjan Crossword</title>
-    <style>
-        body {
-            min-height: 100vh;
-            padding: 0;
-            border: 0;
-            margin: 0;
-        }
-
-        body>* {
-            height: auto;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 0;
-            padding: 0.25rem 1rem;
-        }
-
-        nav>* {
-            padding: 0;
-            margin: 0;
-            align-self: center;
-        }
-
-        nav>button {
-            padding: 0.25rem 1rem;
-            cursor: pointer;
-            border: 1px solid #aaa;
-            outline: none;
-            border-radius: 4px;
-        }
-
-        main {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .loader {
-            width: 144px;
-            aspect-ratio: 1;
-            color: #dc1818;
-            background:
-                radial-gradient(circle at 60% 65%, currentColor 62%, #0000 65%) top left,
-                radial-gradient(circle at 40% 65%, currentColor 62%, #0000 65%) top right,
-                linear-gradient(to bottom left, currentColor 42%, #0000 43%) bottom left,
-                linear-gradient(to bottom right, currentColor 42%, #0000 43%) bottom right;
-            background-size: 50% 50%;
-            background-repeat: no-repeat;
-            position: relative;
-            margin-top: 20vh;
-        }
-
-        .loader:after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: inherit;
-            opacity: 0.4;
-            animation: l3 1s infinite;
-        }
-
-        @keyframes l3 {
-            to {
-                transform: scale(1.8);
-                opacity: 0
-            }
-        }
-
-        .iframe-container {
-            display: none;
-            width: 100%;
-            min-height: 100vh;
-            border: 0;
-            margin: 0;
-            padding: 0;
-        }
-    </style>
 </head>
 
 <body>
@@ -98,21 +17,21 @@
         <h5>❤️ Ananya Anjan Crossword</h5>
         <button type="menu">Guide >></button>
     </nav>
-    <main>
+    <div class="loader-container">
         <div class="loader"></div>
-        <div class="iframe-container">
-            <iframe height="auto" width="100%" allow="web-share; fullscreen"
-                style="border:none; width: 100% !important; display: block !important; margin: 0 !important; min-height: 100vh;"
-                src="https://amuselabs.com/pmm/crossword?id=064032f2&set=0e0b2aa9dfdcd34b8239415345c6a5af877a655255bd8de927a2a7857eccd15e&embed=1"
-                aria-label="Puzzle Me Game">
-            </iframe>
-        </div>
+    </div>
+    <main>
+        <iframe height="auto" width="100%" allow="web-share; fullscreen"
+            style="border:none; width: 100% !important; display: block !important; margin: 0 !important; min-height: 100vh;"
+            src="https://amuselabs.com/pmm/crossword?id=064032f2&set=0e0b2aa9dfdcd34b8239415345c6a5af877a655255bd8de927a2a7857eccd15e&embed=1"
+            aria-label="Puzzle Me Game">
+        </iframe>
     </main>
     <script>
         window.onload = () => {
             setTimeout(() => {
-                document.querySelector(".loader").style.display = "none"
-                document.querySelector(".iframe-container").style.display = "block"
+                document.querySelector(".loader-container").style.display = "none"
+                document.querySelector("main").style.visibility = "visible"
             }, 1500)
         }
     </script>
