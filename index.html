@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <title>Ananya Anjan Crossword</title>
     <style>
         body {
@@ -18,29 +22,46 @@
             margin: 0;
             padding: 0;
         }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+            padding: 0.25rem 1rem;
+        }
+
+        nav>* {
+            padding: 0;
+            margin: 0;
+            align-self: center;
+        }
+
+        nav>button {
+            padding: 0.25rem 1rem;
+            cursor: pointer;
+            border: 1px solid #aaa;
+            outline: none;
+            border-radius: 4px;
+        }
     </style>
 </head>
 
 <body>
-    <div style="margin: auto; text-align: center;">
-        <h4>The Ananya-Anjan Crossword</h4>
-        By Anusha and Basu
-        <br>
-        <h3>Dear Ananya, and Anjan,</h3>
-        <br>
-        First of all, hearty congratulations! We are SO happy that this day is here.
-        To celebrate your awesome journey together, we’ve put together this special crossword puzzle. Dive in and have
-        fun cracking the clues.
-        <br>
-        All the best!!
-    </div>
+    <nav>
+        <h5>❤️ Ananya Anjan Crossword</h5>
+        <button type="menu">Guide >></button>
+    </nav>
     <main>
         <iframe height="auto" width="100%" allow="web-share; fullscreen"
-            style="border:none; width: 100% !important; display: block !important; margin: 0 !important; min-height: 95vh;"
+            style="border:none; width: 100% !important; display: block !important; margin: 0 !important; min-height: 100vh;"
             src="https://amuselabs.com/pmm/crossword?id=064032f2&set=0e0b2aa9dfdcd34b8239415345c6a5af877a655255bd8de927a2a7857eccd15e&embed=1"
             aria-label="Puzzle Me Game">
         </iframe>
     </main>
+    <script>
+        // window.onload = () => alert("Page Loaded")
+    </script>
 </body>
 
 </html>
